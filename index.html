@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Secure Internship Application</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <p class="eyebrow">CAREER PORTAL</p>
+      <h1>Secure Internship Application</h1>
+      <p>Find your opportunity and submit your application.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="panel">
+      <div class="section-heading">
+        <div>
+          <h2>Available Internships</h2>
+          <p>Choose an internship to apply for.</p>
+        </div>
+        <span class="status">Demo portal</span>
+      </div>
+
+      <div id="internshipList" class="internship-list"></div>
+    </section>
+
+    <section class="panel" id="application">
+      <h2>Application Form</h2>
+      <p class="muted">All fields marked with * are required.</p>
+
+      <form id="applicationForm">
+        <label for="fullName">Full name *</label>
+        <input id="fullName" name="fullName" type="text"
+          minlength="2" maxlength="60" required
+          autocomplete="name" placeholder="Enter your full name">
+
+        <label for="email">Email address *</label>
+        <input id="email" name="email" type="email"
+          maxlength="100" required autocomplete="email"
+          placeholder="you@example.com">
+
+        <label for="internship">Internship *</label>
+        <select id="internship" name="internship" required>
+          <option value="">Select an internship</option>
+        </select>
+
+        <label for="message">Why are you interested? *</label>
+        <textarea id="message" name="message" rows="4"
+          minlength="10" maxlength="500" required
+          placeholder="Write at least 10 characters"></textarea>
+
+        <button id="submitButton" type="submit">Submit Application</button>
+        <button id="retryButton" class="secondary" type="button" hidden>
+          Try Again
+        </button>
+      </form>
+
+      <p id="statusMessage" class="status-message"
+        role="status" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Secure Internship Portal · HTML, CSS and JavaScript</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

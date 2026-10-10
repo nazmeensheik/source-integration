@@ -1,0 +1,180 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6fb;
+  color: #202840;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 950px;
+  margin: auto;
+}
+
+.hero {
+  background: #253b80;
+  color: white;
+  padding: 42px 0;
+}
+
+.hero h1 {
+  margin: 4px 0;
+  font-size: clamp(27px, 5vw, 38px);
+}
+
+.eyebrow {
+  letter-spacing: 2px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.panel {
+  background: white;
+  margin: 25px 0;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px #1b2c5010;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+.muted {
+  color: #626b7c;
+  margin-bottom: 20px;
+}
+
+.status {
+  background: #e5edff;
+  color: #253b80;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+.internship-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+  margin-top: 18px;
+}
+
+.internship-card {
+  border: 1px solid #dce2ee;
+  border-radius: 9px;
+  padding: 17px;
+}
+
+.internship-card h3 {
+  margin: 0 0 6px;
+  color: #253b80;
+}
+
+.internship-card p {
+  margin: 4px 0 12px;
+  color: #626b7c;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin: 15px 0 6px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cbd2df;
+  border-radius: 7px;
+  font: inherit;
+  background: white;
+}
+
+input:focus, select:focus, textarea:focus,
+button:focus-visible {
+  outline: 3px solid #a9c4ff;
+  outline-offset: 2px;
+}
+
+button {
+  border: 0;
+  border-radius: 7px;
+  padding: 12px 18px;
+  margin-top: 18px;
+  background: #315bd6;
+  color: white;
+  font: inherit;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #2347b5;
+}
+
+button:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+.secondary {
+  background: #e8ecf4;
+  color: #202840;
+  margin-left: 8px;
+}
+
+.secondary:hover {
+  background: #d9dfeb;
+}
+
+.status-message {
+  margin-bottom: 0;
+  font-weight: bold;
+}
+
+.status-message.success {
+  color: #14743b;
+}
+
+.status-message.error {
+  color: #b42318;
+}
+
+footer {
+  text-align: center;
+  color: #626b7c;
+  padding: 18px;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+@media (max-width: 600px) {
+  .internship-list {
+    grid-template-columns: 1fr;
+  }
+
+  .panel {
+    padding: 18px;
+  }
+
+  .hero {
+    padding: 30px 0;
+  }
+}
